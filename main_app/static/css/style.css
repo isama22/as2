@@ -37,6 +37,30 @@ h4 {
     margin: 25px;
 }
 
+.about {
+    color: bisque;
+    margin-top: 50px;
+    margin-left: 500px;
+    margin-bottom: 15px;
+    height: 1000px;
+    width: 800px;
+    border: solid 2px;
+    border-color: #E3BDBB;
+    background-image: url(https://i.postimg.cc/SsL2kNhr/Screen-Shot-2020-03-17-at-9-17-06-PM.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#about-text {
+    font-family: Helvetica, sans-serif;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    width: 600px;
+    color: #E3BDBB;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 15px;
+}
 
 .home {
     background-image: url("https://i.postimg.cc/1tfmJ4m4/Screen-Shot-2020-03-17-at-9-16-20-PM.png");
@@ -97,32 +121,6 @@ a:hover {
     color: white;
 }
 
-
-.about {
-    color: bisque;
-    margin-top: 50px;
-    margin-left: 500px;
-    margin-bottom: 15px;
-    height: 1000px;
-    width: 800px;
-    border: solid 2px;
-    border-color: #E3BDBB;
-    background-image: url(https://i.postimg.cc/SsL2kNhr/Screen-Shot-2020-03-17-at-9-17-06-PM.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-#about-text {
-    font-family: Helvetica, sans-serif;
-    padding: 30px;
-    display: flex;
-    justify-content: center;
-    width: 600px;
-    color: #E3BDBB;
-    background-color: rgba(0, 0, 0, 0.5);
-    margin: 15px;
-}
-
 #contact {
     color: wheat;
     display: flex;
@@ -140,4 +138,166 @@ a:hover {
     margin-bottom: 20px;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
+}
+
+.content-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.figurative-img {
+    height: 470px;
+    width: 400px;
+    margin: 20px;
+    padding: 10px;
+    border: solid 1px;
+    border-color: bisque;
+}
+
+
+.index-link {
+    color: bisque;
+    border: solid 1px bisque;
+    padding: 10px;
+    width: 240px;
+    margin: 20px;
+}
+
+.fibers-index-link {
+    color: bisque;
+    border: solid 1px bisque;
+    padding: 10px;
+    width: 260px;
+    margin: 20px;
+}
+
+.index-title {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.digital-img-index {
+    height: 200px;
+    width: 170px;
+    margin: 20px;
+    padding: 10px;
+    border: solid 1px;
+    border-color: bisque;
+}
+
+.fibers-img-index {
+    height: 200px;
+    width: 200px;
+    margin: 20px;
+    padding: 10px;
+    border: solid 1px;
+    border-color: bisque;
+}
+
+.description-card {
+    display: flex;
+    flex-direction: row;
+}
+
+.login  {
+    color: white;
+    cursor: default;
+    margin: 25px;
+}
+
+.login:hover {
+    color: white;
+}
+
+.loggedin-nav-link {
+    margin-top: 30px;
+    color: #E3BDBB;
+}
+
+.fiber-buttons {
+    cursor: auto;
+    margin: 30px;
+}
+
+.edit-options {
+    margin: 30px;
+    width: 170px;
+}
+
+.edit-link {
+    color: bisque;
+    font-size: 12px;
+}
+
+.edit-link:hover {
+    color: white;
+    font-weight: bold;
+}
+
+.description {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 500px;
+}
+
+
+.loggedin-option {
+    color: bisque;
+    margin: 25px;
+}
+
+.fibers-detail-page  {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-right: 200px;
+}
+
+.fibers-img {
+    height: 667px;
+    width: 600px;
+    margin: 20px;
+    padding: 10px;
+    border: solid 1px;
+    border-color: bisque;
+}
+
+.figurative-detail-page  {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-right: 200px;
+}
+
+.figurative-img {
+    height: 667px;
+    width: 600px;
+    margin: 20px;
+    padding: 10px;
+    border: solid 1px;
+    border-color: bisque;
+}
+
+.digital-detail-page  {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-right: 100px;
+}
+
+.digital-img {
+    height: 667px;
+    width: 500px;
+    margin: 20px;
+    padding: 10px;
+    border: solid 1px;
+    border-color: bisque;
+}
+
+.delete-form {
+    margin: 25px;
+}
+
+.edit-page-cancel {
+    margin: 25px;
 }

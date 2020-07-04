@@ -1,5 +1,5 @@
-from django.shortcuts import render
-
+from django.shortcuts import render, redirect
+from .models import Fiber, Figurative, Digital, FiberPhoto, FigurativePhoto, DigitalPhoto
 # Add the following import
 from django.http import HttpResponse
 
@@ -12,3 +12,4 @@ def about(request):
 
 def contact(request):
   return render(request, 'contact.html')  
+
