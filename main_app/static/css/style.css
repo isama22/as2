@@ -96,3 +96,29 @@ a:link {
 a:hover {
     color: white;
 }
+
+
+.about {
+    color: bisque;
+    margin-top: 50px;
+    margin-left: 500px;
+    margin-bottom: 15px;
+    height: 1000px;
+    width: 800px;
+    border: solid 2px;
+    border-color: #E3BDBB;
+    background-image: url(https://i.postimg.cc/SsL2kNhr/Screen-Shot-2020-03-17-at-9-17-06-PM.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#about-text {
+    font-family: Helvetica, sans-serif;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    width: 600px;
+    color: #E3BDBB;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 15px;
+}
