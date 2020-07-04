@@ -12,5 +12,8 @@ urlpatterns = [
   path('digitals/create/', views.DigitalsCreate.as_view(), name='digitals_create'),
   path('digitals/<int:pk>/update/', views.DigitalUpdate.as_view(), name='digitals_update'),
   path('digitals/<int:pk>/delete/', views.DigitalDelete.as_view(), name='digitals_delete'),
+
+  path('digitals/<int:digital_id>/digital_photo/', views.digital_photo, name='digital_photo'),
+  path('digitals/<int:digital_id>/delete_digital_photo/', views.delete_digital_photo, name='delete_digital_photo'),
   
 ]
