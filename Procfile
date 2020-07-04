@@ -1,0 +1,1 @@
+web: gunicorn ArtSite2.wsgi
