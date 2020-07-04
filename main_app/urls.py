@@ -24,4 +24,12 @@ urlpatterns = [
   path('figuratives/<int:figurative_id>/figurative_photo/', views.figurative_photo, name='figurative_photo'),
   path('figuratives/<int:figurative_id>/delete_figurative_photo/', views.delete_figurative_photo, name='delete_figurative_photo'),
   
+  path('fibers/', views.fibers_index, name="fibers_index"),
+  path('fibers/<int:fiber_id>/', views.fibers_detail, name='fibers_detail'),
+  path('fibers/create/', views.FibersCreate.as_view(), name='fibers_create'),
+  path('fibers/<int:pk>/update/', views.FiberUpdate.as_view(), name='fibers_update'),
+  path('fibers/<int:pk>/delete/', views.FiberDelete.as_view(), name='fibers_delete'),
+  path('fibers/<int:fiber_id>/fiber_photo/', views.fiber_photo, name='fiber_photo'),
+  path('fibers/<int:fiber_id>/delete_fiber_photo/', views.delete_fiber_photo, name='delete_fiber_photo'),
+
 ]

@@ -92,7 +92,7 @@ class FigurativeUpdate(LoginRequiredMixin, UpdateView):
 class FigurativeDelete(LoginRequiredMixin, DeleteView):
   model = Figurative
   success_url = '/figuratives/'
-  
+
 def figurative_photo(request, figurative_id):
     # photo-file will be the "name" attribute on the <input type="file">
     photo_file = request.FILES.get('photo-file', None)
@@ -119,6 +119,59 @@ def delete_figurative_photo(request, figurative_id):
     key.delete()
     
     return redirect('figuratives_detail', figurative_id=figurative_id)
+
+
+def fibers_index(request):
+  fibers = Fiber.objects.all()
+  return render(request, 'fibers/index.html', { 'fibers': fibers })
+
+def fibers_detail(request, fiber_id):
+  fiber = Fiber.objects.get(id=fiber_id)
+  return render(request, 'fibers/detail.html', { 'fiber': fiber })  
+
+class FibersCreate(LoginRequiredMixin, CreateView):
+  model = Fiber
+  fields = '__all__'
+  success_url = '/fibers/'
+  # def form_valid(self, form):
+  #   form.instance.user = self.request.user
+  #   return super().form_valid(form)
+
+class FiberUpdate(LoginRequiredMixin, UpdateView):
+  model = Fiber
+  # Let's disallow the renaming of a cat by excluding the name field!
+  fields = '__all__'
+  success_url = '/fibers/'
+
+class FiberDelete(LoginRequiredMixin, DeleteView):
+  model = Fiber
+  success_url = '/fibers/'
+
+def fiber_photo(request, fiber_id):
+    # photo-file will be the "name" attribute on the <input type="file">
+    photo_file = request.FILES.get('photo-file', None)
+    if photo_file:
+        s3 = boto3.client('s3')
+        # need a unique "key" for S3 / needs image file extension too
+        key = uuid.uuid4().hex[:6] + photo_file.name[photo_file.name.rfind('.'):]
+        # just in case something goes wrong
+        try:
+            s3.upload_fileobj(photo_file, BUCKET, key)
+            # build the full url string
+            url = f"{S3_BASE_URL}{BUCKET}/{key}"
+            # we can assign to cat_id or cat (if you have a cat object)
+            photo =FiberPhoto(url=url, fiber_id=fiber_id)
+            photo.save()
+        except:
+            print('An error occurred uploading file to S3')
+    return redirect('fibers_detail', fiber_id=fiber_id)  
+
+
+def delete_fiber_photo(request, fiber_id):
+    key = FiberPhoto.objects.get(fiber_id=fiber_id)
+    key.delete()
+    
+    return redirect('fibers_detail', fiber_id=fiber_id)    
 
 
 def signup(request):
