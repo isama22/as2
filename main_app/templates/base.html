@@ -28,6 +28,7 @@
                 <li><a class="nav-link" href="{% url 'about' %}"><em>About</em> &nbsp;</a></li>
                 <li><a class="nav-link" href="{% url 'contact' %}"><em>Contact</em> &nbsp;</a></li>
                 <li><a class="nav-link" href="{% url 'digitals_index' %}"><em>Digital</em> &nbsp;</a></li>
+                <li><a class="nav-link" href="{% url 'figuratives_index' %}"><em>Figurative</em> &nbsp;</a></li>
                 {% if user.is_authenticated %}
                 <li><a href="{% url 'logout' %}">Log Out</a></li>
                 {% else %}

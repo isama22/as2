@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="figurative-detail-page">
+<div class="description-card">
+   <div class="description">
+    <ul>
+      <li>{{ figurative.title }}</li>
+      <br><br>
+      <li>{{ figurative.description }}</li>
+      <br><br>
+      <li> <a class="edit-link" href="{% url 'figuratives_index' %}">Back</a></li>
+    </ul>
+  </div> 
+   </div> 
+
+  {% for photo in figurative.figurativephoto_set.all %}
+  <img class="figurative-img" src="{{photo.url}}">
+
+</div>
+{% if user.is_authenticated %}
+<div>
+  <form class="delete-form" action="{% url 'delete_figurative_photo' figurative.id %}" method="POST">
+    {% csrf_token %}
+    <input type="submit" value="Delete Photo">
+  </form>
+</div>
+{% endif %}
+{% empty %}
+<form action="{% url 'figurative_photo' figurative.id %}" enctype="multipart/form-data" method="POST">
+  {% csrf_token %}
+  <input type="file" name="photo-file">
+  <br><br>
+  <input type="submit" value="Upload Photo">
+</form>
+
+{% endfor %}
+
+{% if user.is_authenticated %}
+<div class="edit-options">
+  <a class="edit-link" href="{% url 'figuratives_update' figurative.id %}">Edit</a>
+  <a class="edit-link" href="{% url 'figuratives_delete' figurative.id %}">Delete</a>
+</div>
+
+{% endif %}
+{% endblock %}
