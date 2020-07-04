@@ -122,3 +122,22 @@ a:hover {
     background-color: rgba(0, 0, 0, 0.5);
     margin: 15px;
 }
+
+#contact {
+    color: wheat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 450px;
+}
+
+.content-page {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 120px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
