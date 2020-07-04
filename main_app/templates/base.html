@@ -26,16 +26,13 @@
             <ul>
                 <li><a class="nav-link" href="{% url 'home' %}"><em>Home</em> &nbsp;</a></li>
                 <li><a class="nav-link" href="{% url 'about' %}"><em>About</em> &nbsp;</a></li>
-                <li><a class="nav-link" href="{% url 'contact' %}"><em>Contact</em> &nbsp;</a></li>
-                <li><a class="nav-link" href="{% url 'digitals_index' %}"><em>Digital</em> &nbsp;</a></li>
-                <li><a class="nav-link" href="{% url 'figuratives_index' %}"><em>Figurative</em> &nbsp;</a></li>
                 <li><a class="nav-link" href="{% url 'fibers_index' %}"><em>Fibers</em> &nbsp;</a></li>
+                <li><a class="nav-link" href="{% url 'figuratives_index' %}"><em>Figurative</em> &nbsp;</a></li>
+                <li><a class="nav-link" href="{% url 'digitals_index' %}"><em>Digital</em> &nbsp;</a></li>
+                <li><a class="nav-link" href="{% url 'contact' %}"><em>Contact</em> &nbsp;</a></li>
                 {% if user.is_authenticated %}
-                <li><a href="{% url 'logout' %}">Log Out</a></li>
-                {% else %}
-                <li><a href="{% url 'login' %}">Log In</a></li>
-                <li><a href="{% url 'signup' %}">Sign Up</a></li>
-              {% endif %}
+                <li><a class="loggedin-nav-link" href="{% url 'logout' %}">Log Out</a></li>
+                {% endif %}
             </ul>
         </nav>
         {% block content %}
