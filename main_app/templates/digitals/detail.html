@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="digital-detail-page">
+<div class="description-card">
+   <div class="description">
+    <ul>
+      <li>{{ digital.title }}</li>
+      <br><br>
+      <li>{{ digital.description }}</li>
+      <br><br>
+      <li>  <a class="edit-link" href="{% url 'digitals_index' %}">Back</a></li>
+    </ul>
+  </div> 
+   </div> 
+
+  
+{% if user.is_authenticated %}
+<div class="edit-options">
+  <a class="edit-link" href="{% url 'digitals_update' digital.id %}">Edit</a>
+  <a class="edit-link" href="{% url 'digitals_delete' digital.id %}">Delete</a>
+</div>
+
+{% endif %}
+{% endblock %}
