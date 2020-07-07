@@ -156,6 +156,11 @@ a:hover {
     border-color: bisque;
 }
 
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 80px;
+}
 
 .index-link {
     color: bisque;
