@@ -1,22 +1,25 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h4><em>Figurative</em></h4>
 {% if user.is_authenticated %}
 <h5><a class="loggedin-option" href="{% url 'figuratives_create' %}"><em>+ Add a Figurative Piece</em> &nbsp;</a></h5>
 {% endif %}
 
-{% for figurative in figuratives %}
-  <div class="card">
-    <a href="/figuratives/{{ figurative.id }}">
-    <div class="fibers-index-link">
-      <span>{{ figurative.title }}</span>
-      {% for photo in figurative.figurativephoto_set.all %}
-      <img class="fibers-img-index" src="{{photo.url}}">
-      {% endfor %}
+<div class="center-grid">
+  <div class="grid">
+    {% for figurative in figuratives %}
+    <div>
+      <div class="fibers-index-link">
+        <span>{{ figurative.title }}</span>
+        {% for photo in figurative.figurativephoto_set.all %}
+        <a href="/figuratives/{{ figurative.id }}">
+          <img class="fibers-img-index" src="{{photo.url}}">
+        </a>
+        {% endfor %}
+      </div>
     </div>
-  </a>
+    {% endfor %}
   </div>
-  {% endfor %}
-  
+</div>
+
 {% endblock %}

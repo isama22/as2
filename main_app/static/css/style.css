@@ -170,6 +170,12 @@ a:hover {
     margin: 20px;
 }
 
+.center-grid {
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+}
+
 .fibers-index-link {
     color: bisque;
     border: solid 1px bisque;
@@ -206,6 +212,25 @@ a:hover {
     flex-direction: row;
 }
 
+.login-page {
+    display: flex;
+    justify-content: center;
+    margin: 60px;
+}
+
+.input {
+    margin: 6px;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    font-size: 12px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.btn {
+    margin-left: 90px;
+}
 .login  {
     color: white;
     cursor: default;
@@ -229,11 +254,14 @@ a:hover {
 .edit-options {
     margin: 30px;
     width: 170px;
+    display: flex;
+    flex-direction: row;
 }
 
 .edit-link {
     color: bisque;
     font-size: 12px;
+    margin: 10px;
 }
 
 .edit-link:hover {
@@ -248,6 +276,9 @@ a:hover {
     width: 500px;
 }
 
+.loggedin-edit {
+    margin-left: 100px;
+}
 
 .loggedin-option {
     color: bisque;
@@ -299,10 +330,24 @@ a:hover {
     border-color: bisque;
 }
 
-.delete-form {
-    margin: 25px;
+.del {
+    margin: 6px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    font-size: 12px;
+    border: 1px solid black;
+    border-radius: 5px;
 }
 
 .edit-page-cancel {
     margin: 25px;
+}
+
+.add-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 50px;
 }
