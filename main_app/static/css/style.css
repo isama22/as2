@@ -113,6 +113,9 @@ li {
     color: #E3BDBB;
 }
 
+a {
+    color: bisque;
+}
 a:link {
     text-decoration: none;
 }

@@ -4,20 +4,24 @@
 {% if user.is_authenticated %}
 <h5><a class="loggedin-option" href="{% url 'fibers_create' %}"><em>+ Add a Fiber Piece</em> &nbsp;</a></h5>
 {% endif %}
+
 <div class="center-grid">
+
   <div class="grid">
     {% for fiber in fibers %}
     <div>
-      <div class="fibers-index-link">
-        <span class="index-title">{{ fiber.title }}</span>
-        {% for photo in fiber.fiberphoto_set.all %}
-        <a href="/fibers/{{ fiber.id }}">
+      <a href="/fibers/{{ fiber.id }}">
+        <div class="fibers-index-link">
+          <span class="index-title">{{ fiber.title }}</span>
+          {% for photo in fiber.fiberphoto_set.all %}
           <img class="fibers-img-index" src="{{photo.url}}">
-        </a>
-        {% endfor %}
-      </div>
+          {% endfor %}
+        </div>
+      </a>
     </div>
     {% endfor %}
   </div>
+
 </div>
+
 {% endblock %}

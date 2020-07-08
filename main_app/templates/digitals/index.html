@@ -6,18 +6,18 @@
 <h5><a class="loggedin-option" href="{% url 'digitals_create' %}"><em>+ Add a Digital Piece</em> &nbsp;</a></h5>
 {% endif %}
 <div class="grid">
-{% for digital in digitals %}
-<div>
-  <div class="index-link">
-    <span class="index-title">{{ digital.title }}</span>
-    {% for photo in digital.digitalphoto_set.all %}
+  {% for digital in digitals %}
+  <div>
     <a href="/digitals/{{ digital.id }}">
-      <img class="digital-img-index" src="{{photo.url}}">
+      <div class="index-link">
+        <span class="index-title">{{ digital.title }}</span>
+        {% for photo in digital.digitalphoto_set.all %}
+        <img class="digital-img-index" src="{{photo.url}}">
+        {% endfor %}
+      </div>
     </a>
-      {% endfor %}
-    </div>
 </div>
-  {% endfor %}
+{% endfor %}
 </div>
 
 {% endblock %}

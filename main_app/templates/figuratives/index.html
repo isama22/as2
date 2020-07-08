@@ -8,16 +8,16 @@
 <div class="center-grid">
   <div class="grid">
     {% for figurative in figuratives %}
-    <div>
+    
+    <a href="/figuratives/{{ figurative.id }}">
       <div class="fibers-index-link">
         <span>{{ figurative.title }}</span>
         {% for photo in figurative.figurativephoto_set.all %}
-        <a href="/figuratives/{{ figurative.id }}">
           <img class="fibers-img-index" src="{{photo.url}}">
-        </a>
-        {% endfor %}
-      </div>
-    </div>
+          {% endfor %}
+        </div>
+      </a>
+    
     {% endfor %}
   </div>
 </div>
