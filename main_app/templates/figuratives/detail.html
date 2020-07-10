@@ -32,16 +32,18 @@
 
   {% for photo in figurative.figurativephoto_set.all %}
   <img class="figurative-img" src="{{photo.url}}">
-
 </div>
 
 {% empty %}
+
+{% if user.is_authenticated %}
 <form action="{% url 'figurative_photo' figurative.id %}" enctype="multipart/form-data" method="POST">
   {% csrf_token %}
   <input type="file" name="photo-file">
   <br><br>
   <input type="submit" value="Upload Photo">
 </form>
+{% endif %}
 
 {% endfor %}
 

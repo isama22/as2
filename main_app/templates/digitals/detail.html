@@ -36,12 +36,14 @@
 </div>
 
 {% empty %}
+{% if user.is_authenticated %}
 <form action="{% url 'digital_photo' digital.id %}" enctype="multipart/form-data" method="POST">
   {% csrf_token %}
   <input type="file" name="photo-file">
   <br><br>
   <input type="submit" value="Upload Photo">
 </form>
+{% endif %}
 {% endfor %}
 
 

@@ -11,12 +11,12 @@
     {% for fiber in fibers %}
     <div>
       <a href="/fibers/{{ fiber.id }}">
-        <div class="fibers-index-link">
-          <span class="index-title">{{ fiber.title }}</span>
+   
+          
           {% for photo in fiber.fiberphoto_set.all %}
           <img class="fibers-img-index" src="{{photo.url}}">
           {% endfor %}
-        </div>
+     
       </a>
     </div>
     {% endfor %}

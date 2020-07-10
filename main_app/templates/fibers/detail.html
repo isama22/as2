@@ -36,12 +36,14 @@
 
 </div>
 {% empty %}
+{% if user.is_authenticated %}
 <form action="{% url 'fiber_photo' fiber.id %}" enctype="multipart/form-data" method="POST">
   {% csrf_token %}
   <input type="file" name="photo-file">
   <br><br>
   <input type="submit" value="Upload Photo">
 </form>
+{% if user.is_authenticated %}
 {% endfor %}
 
 
