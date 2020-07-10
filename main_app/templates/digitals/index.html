@@ -9,11 +9,12 @@
   {% for digital in digitals %}
   <div>
     <a href="/digitals/{{ digital.id }}">
-
+      <div class="index-link">
+        <span class="index-title">{{ digital.title }}</span>
         {% for photo in digital.digitalphoto_set.all %}
         <img class="digital-img-index" src="{{photo.url}}">
         {% endfor %}
-   
+      </div>
     </a>
 </div>
 {% endfor %}
