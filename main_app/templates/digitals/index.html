@@ -12,7 +12,10 @@
       <div class="index-link">
         <span class="index-title">{{ digital.title }}</span>
         {% for photo in digital.digitalphoto_set.all %}
+        {% if forloop.first %}
         <img class="digital-img-index" src="{{photo.url}}">
+        {%endif%}
+        <!-- <img class="digital-img-index" src="{{ forloop.counter0 }}"> -->
         {% endfor %}
       </div>
     </a>
