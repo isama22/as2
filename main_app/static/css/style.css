@@ -32,6 +32,7 @@ h1 {
     justify-content: center;
     color: aqua;
 }
+
 h4 {
     color: #E3BDBB;
     margin: 25px;
@@ -101,7 +102,6 @@ nav {
     margin-top: 20px;
     margin-left: 800px;
     list-style-type: none;
-    
 }
 
 .nav-link {
@@ -116,6 +116,7 @@ li {
 a {
     color: bisque;
 }
+
 a:link {
     text-decoration: none;
 }
@@ -170,6 +171,7 @@ a:hover {
     grid-template-columns: 1fr 1fr 1fr;
     margin: 60px 250px;
 }
+
 .index-link {
     color: bisque;
     border: solid 1px bisque;
@@ -217,7 +219,7 @@ a:hover {
 
 .description-card {
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
 }
 
 .login-page {
@@ -247,10 +249,12 @@ a:hover {
     border: 1px solid black;
     border-radius: 5px;
 }
+
 /* .btn {
     margin-left: 90px;
 } */
-.login  {
+
+.login {
     color: white;
     cursor: default;
     margin: 25px;
@@ -291,12 +295,13 @@ a:hover {
 .description {
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    /* align-items: center; */
     width: 500px;
+    margin-top: 250px;
 }
 
 .loggedin-edit {
-    margin-left: 100px;
+    /* margin-left: 100px; */
 }
 
 .loggedin-option {
@@ -304,7 +309,7 @@ a:hover {
     margin: 25px;
 }
 
-.fibers-detail-page  {
+.fibers-detail-page {
     display: flex;
     flex-direction: row-reverse;
     margin-right: 200px;
@@ -319,7 +324,7 @@ a:hover {
     border-color: bisque;
 }
 
-.figurative-detail-page  {
+.figurative-detail-page {
     display: flex;
     flex-direction: row-reverse;
     margin-right: 200px;
@@ -334,9 +339,9 @@ a:hover {
     border-color: bisque;
 }
 
-.digital-detail-page  {
+.digital-detail-page {
     display: flex;
-    flex-direction: row-reverse;
+    /* flex-direction: row-reverse; */
     margin-right: 100px;
 }
 
@@ -351,7 +356,7 @@ a:hover {
 
 .del {
     margin: 6px;
-    background-color: white;
+    background-color: bisque;
     color: black;
     cursor: pointer;
     font-size: 12px;
@@ -369,4 +374,63 @@ a:hover {
     align-items: center;
     flex-direction: column;
     margin: 50px;
+}
+
+.add-pic-center {
+    display: flex;
+    justify-content: center;margin: 30px;
+}
+
+.add-pic {
+    /* padding: 30px;
+    width: 300px;
+    border: solid 1px wheat;
+    text-align: center; */
+    margin-left: 124px;
+}
+
+input {
+    margin: 6px;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    font-size: 12px;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 180px;
+}
+
+
+.empty {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.no-photos {
+    margin: 30px;
+    border: solid 1px wheat;
+    padding: 10px;
+    text-align: center;
+}
+
+.images-div {
+    /* display: flex;
+    flex-direction: column; */
+    /* background-color: white; */
+    margin-left: 150px;
+}
+
+.images {
+    /* background-color: aqua; */
+    
+}
+
+.column-for-delete {
+    /* width: 200px; */
+    display: flex;
+    flex-direction: column;
+    margin-left: 150px;
+
 }

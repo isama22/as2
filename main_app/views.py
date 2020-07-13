@@ -66,9 +66,8 @@ def digital_photo(request, digital_id):
 
 def delete_digital_photo(request, digital_id):
     # key = DigitalPhoto.objects.get(digital_id=digital_id)
-    key = DigitalPhoto.objects.first()
+    key = DigitalPhoto.objects.last()
     key.delete()
-    
     return redirect('digitals_detail', digital_id=digital_id)    
 
 def figuratives_index(request):
