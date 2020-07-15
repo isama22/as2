@@ -108,6 +108,9 @@ nav {
     color: #E3BDBB;
 }
 
+.description-ul {
+    width: 300px;
+}
 li {
     display: inline;
     color: #E3BDBB;
