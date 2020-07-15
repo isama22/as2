@@ -115,7 +115,7 @@ def figurative_photo(request, figurative_id):
 
 def delete_figurative_photo(request, figurative_id):
     #.all() deletes all photos if two images were uploaded on accident while loading, but deletes ALL fig photos
-    key = FigurativePhoto.objects.all()
+    key = FigurativePhoto.objects.last()
     key.delete()
     
     return redirect('figuratives_detail', figurative_id=figurative_id)

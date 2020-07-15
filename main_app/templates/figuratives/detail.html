@@ -1,50 +1,60 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="figurative-detail-page">
+
   <div class="description-card">
-    <div class="description">
-      <ul>
-        <li>{{ figurative.title }}</li>
-        <br><br>
-        <li>{{ figurative.description }}</li>
-        <br><br>
-        <li> <a class="edit-link" href="{% url 'figuratives_index' %}">Back</a></li>
-      </ul>
+      <div class="fibers-images-div">
+        {% for photo in figurative.figurativephoto_set.all %}
+        <img class="figurative-img" src="{{photo.url}}">
+        {% endfor %}
+      </div>
+  </div>
+  <div class="description">
+    <ul>
+      <li>{{ figurative.title }}</li>
+      <br><br>
+      <li>{{ figurative.description }}</li>
+      <br><br>
+      <li> <a class="edit-link" href="{% url 'figuratives_index' %}">Back</a></li>
+    </ul>
+
+    <div class="column-for-delete">
+
       <div class="loggedin-edit">
         {% if user.is_authenticated %}
         <div class="edit-options">
           <a class="edit-link" href="{% url 'figuratives_update' figurative.id %}">Edit</a>
           <a class="edit-link" href="{% url 'figuratives_delete' figurative.id %}">Delete</a>
-          {% if user.is_authenticated %}
-          <div>
             <form action="{% url 'delete_figurative_photo' figurative.id %}" method="POST">
               {% csrf_token %}
-              <input class="del" type="submit" value="Delete Photo">
+              <input class="del" type="submit" value="Delete Last Photo">
             </form>
-          </div>
-          {% endif %}
         </div>
         {% endif %}
-
       </div>
-    </div>
-  </div>
 
-  {% for photo in figurative.figurativephoto_set.all %}
-  <img class="figurative-img" src="{{photo.url}}">
+      {% if user.is_authenticated %}
+      <div class="add-pic">
+        <form action="{% url 'figurative_photo' figurative.id %}" enctype="multipart/form-data" method="POST">
+          {% csrf_token %}
+          <input type="file" name="photo-file">
+          <br><br>
+          <input type="submit" value="Upload Photo">
+        </form>
+      </div>
+      {% endif %}
+    </div>
+
+  </div>
 </div>
 
+{% for photo in figurative.figurativephoto_set.all %}
 {% empty %}
-
-{% if user.is_authenticated %}
-<form action="{% url 'figurative_photo' figurative.id %}" enctype="multipart/form-data" method="POST">
-  {% csrf_token %}
-  <input type="file" name="photo-file">
-  <br><br>
-  <input type="submit" value="Upload Photo">
-</form>
-{% endif %}
-
+<div class="empty">
+  <div class="no-photos">
+    <p>No photos to show yet</p>
+  </div>
+</div>
 {% endfor %}
 
 {% endblock %}

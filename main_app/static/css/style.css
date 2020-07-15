@@ -275,10 +275,10 @@ a:hover {
 }
 
 .edit-options {
-    margin: 30px;
+    margin-bottom: 20px;
     width: 170px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .edit-link {
@@ -296,12 +296,8 @@ a:hover {
     display: flex;
     justify-content: flex-start;
     /* align-items: center; */
-    width: 500px;
+    /* width: 500px; */
     margin-top: 250px;
-}
-
-.loggedin-edit {
-    /* margin-left: 100px; */
 }
 
 .loggedin-option {
@@ -311,7 +307,7 @@ a:hover {
 
 .fibers-detail-page {
     display: flex;
-    flex-direction: row-reverse;
+    /* flex-direction: row-reverse; */
     margin-right: 200px;
 }
 
@@ -326,8 +322,8 @@ a:hover {
 
 .figurative-detail-page {
     display: flex;
-    flex-direction: row-reverse;
-    margin-right: 200px;
+    /* flex-direction: row-reverse; */
+    /* margin-right: 80px; */
 }
 
 .figurative-img {
@@ -386,7 +382,7 @@ a:hover {
     width: 300px;
     border: solid 1px wheat;
     text-align: center; */
-    margin-left: 124px;
+    /* margin-left: 124px; */
 }
 
 input {
@@ -416,16 +412,13 @@ input {
 }
 
 .images-div {
-    /* display: flex;
-    flex-direction: column; */
-    /* background-color: white; */
     margin-left: 150px;
 }
 
-.images {
-    /* background-color: aqua; */
-    
+.fibers-images-div {
+    margin-left: 150px;
 }
+
 
 .column-for-delete {
     /* width: 200px; */

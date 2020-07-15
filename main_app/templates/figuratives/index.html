@@ -13,7 +13,9 @@
       <div class="fibers-index-link">
         <span>{{ figurative.title }}</span>
         {% for photo in figurative.figurativephoto_set.all %}
+        {% if forloop.first %}
           <img class="fibers-img-index" src="{{photo.url}}">
+          {% endif %}
           {% endfor %}
         </div>
       </a>

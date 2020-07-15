@@ -3,12 +3,10 @@
 <div class="fibers-detail-page">
 
   <div class="description-card">
-    <div class="images-div">
-      <div class="images">
+    <div class="fibers-images-div">
         {% for photo in fiber.fiberphoto_set.all %}
         <img class="fibers-img" src="{{photo.url}}">
         {% endfor %}
-      </div>
     </div>
     <div class="description">
       <ul>
