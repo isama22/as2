@@ -14,7 +14,9 @@
         <div class="fibers-index-link">
           <span class="index-title">{{ fiber.title }}</span>
           {% for photo in fiber.fiberphoto_set.all %}
+          {% if forloop.first %}
           <img class="fibers-img-index" src="{{photo.url}}">
+          {% endif %}
           {% endfor %}
         </div>
       </a>

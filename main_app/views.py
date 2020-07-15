@@ -168,7 +168,7 @@ def fiber_photo(request, fiber_id):
 
 
 def delete_fiber_photo(request, fiber_id):
-    key = FiberPhoto.objects.get(fiber_id=fiber_id)
+    key = FiberPhoto.objects.last()
     key.delete()
     
     return redirect('fibers_detail', fiber_id=fiber_id)    

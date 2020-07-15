@@ -1,7 +1,15 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="fibers-detail-page">
+
   <div class="description-card">
+    <div class="images-div">
+      <div class="images">
+        {% for photo in fiber.fiberphoto_set.all %}
+        <img class="fibers-img" src="{{photo.url}}">
+        {% endfor %}
+      </div>
+    </div>
     <div class="description">
       <ul>
         <li>{{ fiber.title }}</li>
@@ -10,40 +18,46 @@
         <br><br>
         <li><a class="edit-link" href="{% url 'fibers_index' %}">Back</a></li>
       </ul>
-      <div class="loggedin-edit">
 
+      <div class="column-for-delete">
+
+      </div>
+      <div class="loggedin-edit">
         {% if user.is_authenticated %}
         <div class="edit-options">
           <a class="edit-link" href="{% url 'fibers_update' fiber.id %}">Edit</a>
           <a class="edit-link" href="{% url 'fibers_delete' fiber.id %}">Delete</a>
-          
-          {% if user.is_authenticated %}
-         
-            <form  action="{% url 'delete_fiber_photo' fiber.id %}" method="POST">
-              {% csrf_token %}
-              <input class="del" type="submit" value="Delete Photo">
-            </form>
-            {% endif %}
-          
-          </div>
+
+          <form action="{% url 'delete_fiber_photo' fiber.id %}" method="POST">
+            {% csrf_token %}
+            <input class="del" type="submit" value="Delete Last Photo">
+          </form>
           {% endif %}
-      </div>
+        </div>
+
+        {% if user.is_authenticated %}
+          <div class="add-pic">
+            <form action="{% url 'fiber_photo' fiber.id %}" enctype="multipart/form-data" method="POST">
+              {% csrf_token %}
+              <input type="file" name="photo-file">
+              <br><br>
+              <input type="submit" value="Upload Photo">
+            </form>
+          </div>
+        </div>
+        {% endif %}
     </div>
   </div>
 
-  {% for photo in fiber.fiberphoto_set.all %}
-  <img class="fibers-img" src="{{photo.url}}">
-
 </div>
+
+{% for photo in fiber.fiberphoto_set.all %}
 {% empty %}
-{% if user.is_authenticated %}
-<form action="{% url 'fiber_photo' fiber.id %}" enctype="multipart/form-data" method="POST">
-  {% csrf_token %}
-  <input type="file" name="photo-file">
-  <br><br>
-  <input type="submit" value="Upload Photo">
-</form>
-{% endif %}
+<div class="empty">
+  <div class="no-photos">
+    <p>No photos to show yet</p>
+  </div>
+</div>
 {% endfor %}
 
 
