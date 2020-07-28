@@ -222,6 +222,7 @@ a:hover {
 
 .description-card {
     display: flex;
+    width: 850px;
     /* flex-direction: row; */
 }
 
@@ -316,7 +317,7 @@ a:hover {
 
 .fibers-img {
     height: 667px;
-    width: 600px;
+    /* width: 600px; */
     margin: 20px;
     padding: 10px;
     border: solid 1px;
@@ -346,7 +347,7 @@ a:hover {
 
 .digital-img {
     height: 667px;
-    width: 500px;
+    /* width: 500px; */
     margin: 20px;
     padding: 10px;
     border: solid 1px;
@@ -427,6 +428,6 @@ input {
     /* width: 200px; */
     display: flex;
     flex-direction: column;
-    margin-left: 150px;
+    /* margin-left: 150px; */
 
 }
