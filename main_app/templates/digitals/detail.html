@@ -7,56 +7,61 @@
       <div class="images">
         {% for photo in digital.digitalphoto_set.all %}
         <img class="digital-img" src="{{photo.url}}">
-        {% endfor %}
+        {% empty %}
+        <div class="empty">
+          <div class="no-photos">
+            <p>No photos to show yet</p>
+          </div>
+          {% endfor %}
+        </div>
       </div>
     </div>
-  </div>
-  <div class="description">
-    <ul class="description-ul">
-      <li>{{ digital.title }}</li>
-      <br><br>
-      <li>{{ digital.description }}</li>
-      <br><br>
-      <li> <a class="edit-link" href="{% url 'digitals_index' %}">Back</a></li>
-    </ul>
+    <div class="description">
+      <ul class="description-ul">
+        <li>{{ digital.title }}</li>
+        <br><br>
+        <li>{{ digital.description }}</li>
+        <br><br>
+        <li> <a class="edit-link" href="{% url 'digitals_index' %}">Back</a></li>
+      </ul>
 
-    <div class="column-for-delete">
+      <div class="column-for-delete">
 
-      <div class="loggedin-edit">
+        <div class="loggedin-edit">
+          {% if user.is_authenticated %}
+          <div class="edit-options">
+            <a class="edit-link" href="{% url 'digitals_update' digital.id %}">Edit</a>
+            <a class="edit-link" href="{% url 'digitals_delete' digital.id %}">Delete</a>
+            <form action="{% url 'delete_digital_photo' digital.id %}" method="POST">
+              {% csrf_token %}
+              <input class="del" type="submit" value="Delete Last Photo">
+            </form>
+          </div>
+          {% endif %}
+        </div>
+
         {% if user.is_authenticated %}
-        <div class="edit-options">
-          <a class="edit-link" href="{% url 'digitals_update' digital.id %}">Edit</a>
-          <a class="edit-link" href="{% url 'digitals_delete' digital.id %}">Delete</a>
-          <form action="{% url 'delete_digital_photo' digital.id %}" method="POST">
+        <div class="add-pic">
+          <form action="{% url 'digital_photo' digital.id %}" enctype="multipart/form-data" method="POST">
             {% csrf_token %}
-            <input class="del" type="submit" value="Delete Last Photo">
+            <input type="file" name="photo-file">
+            <br><br>
+            <input type="submit" value="Upload Photo">
           </form>
         </div>
         {% endif %}
       </div>
 
-      {% if user.is_authenticated %}
-      <div class="add-pic">
-        <form action="{% url 'digital_photo' digital.id %}" enctype="multipart/form-data" method="POST">
-          {% csrf_token %}
-          <input type="file" name="photo-file">
-          <br><br>
-          <input type="submit" value="Upload Photo">
-        </form>
-      </div>
-      {% endif %}
     </div>
-    
   </div>
-</div>
 
-{% for photo in digital.digitalphoto_set.all %}
+  <!-- {% for photo in digital.digitalphoto_set.all %}
 {% empty %}
 <div class="empty">
   <div class="no-photos">
     <p>No photos to show yet</p>
   </div>
 </div>
-{% endfor %}
+{% endfor %} -->
 
-{% endblock %}
+  {% endblock %}
