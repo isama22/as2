@@ -109,7 +109,7 @@ nav {
 }
 
 .description-ul {
-    width: 300px;
+    width: 220px;
 }
 li {
     display: inline;
@@ -374,6 +374,14 @@ a:hover {
     align-items: center;
     flex-direction: column;
     margin: 50px;
+}
+
+.delete-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 100px;
 }
 
 .add-pic-center {
