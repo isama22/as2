@@ -433,34 +433,16 @@ input {
              /* home */
 
     .home {
-        /* background-image: url("https://i.postimg.cc/1tfmJ4m4/Screen-Shot-2020-03-17-at-9-16-20-PM.png");
-        background-repeat: no-repeat;
-        background-size: cover; */
-        /* margin-top: 50px; */
         width: 300px;
         height: 500px;
-        /* z-index: -1;
-        border: solid 2px;
-        border-color: #E3BDBB;
-        display: flex;
-        justify-content: center; */
         margin-left: 26px;
         margin-bottom: 0px;
         margin-top: 10px;
     }
     #home-main-content {
-        /* display: flex;
-        flex-direction: column;
-        justify-content: center;
-        color: #E3BDBB; */
-        /* margin-top: 0px; */
         margin: 20px;
-        /* background-color: rgba(0, 0, 0, 0.5); */
         width: 300px;
         height: 450px;
-        /* border: solid 2px;
-        border-color: #E3BDBB;
-        z-index: 1; */
     }
     .enter {
         display: flex;
@@ -483,15 +465,10 @@ input {
         font-size: 11px;
     }
     nav {
-        /* display: flex;
-        flex-direction: row; */
         height: 30px;
-        /* justify-content: center;
-        align-items: center; */
         margin-top: 10px;
         margin-left: 0px;
         margin-right: 25px;
-        /* list-style-type: none; */
         font-size: 12px;
     }
     
@@ -505,5 +482,22 @@ input {
     li {
         display: inline;
         color: #E3BDBB;
+    }
+        /* about page  */
+    .about {
+        margin-top: 20px;
+        margin-left: 15px;
+        margin-bottom: 15px;
+        height: 1150px;
+        width: 323px;
+    }
+    #about {
+        font-size: 11px;
+    }
+    #about-text {
+        padding: 10px;
+        width: 270px;
+        margin: 0px;
+        margin-left: 15px;
     }
 }
