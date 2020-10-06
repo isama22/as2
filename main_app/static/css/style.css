@@ -540,4 +540,14 @@ input {
     .mobile-description-li {
         margin: 10px;
     }
+        /* figurative detail  */  
+    .figurative-img {
+        /* height: 470px; */
+        height: 267px;
+        width: 260px;
+        /* margin: 20px;
+        padding: 10px;
+        border: solid 1px;
+        border-color: bisque; */
+    }
 }

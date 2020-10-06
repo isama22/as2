@@ -3,19 +3,19 @@
 <div class="figurative-detail-page">
 
   <div class="description-card">
-      <div class="fibers-images-div">
-        {% for photo in figurative.figurativephoto_set.all %}
-        <img class="figurative-img" src="{{photo.url}}">
-        {% endfor %}
-      </div>
-  </div>
+    <div class="fibers-images-div">
+      {% for photo in figurative.figurativephoto_set.all %}
+      <img class="figurative-img" src="{{photo.url}}">
+      {% endfor %}
+    </div>
+    
   <div class="description">
     <ul class="description-ul">
-      <li>{{ figurative.title }}</li>
+      <li class="mobile-description-li">{{ figurative.title }}</li>
       <br><br>
-      <li>{{ figurative.description }}</li>
+      <li class="mobile-description-li">{{ figurative.description }}</li>
       <br><br>
-      <li> <a class="edit-link" href="{% url 'figuratives_index' %}">Back</a></li>
+      <li class="mobile-description-li"> <a class="edit-link" href="{% url 'figuratives_index' %}">Back</a></li>
     </ul>
 
     <div class="column-for-delete">
@@ -25,10 +25,10 @@
         <div class="edit-options">
           <a class="edit-link" href="{% url 'figuratives_update' figurative.id %}">Edit</a>
           <a class="edit-link" href="{% url 'figuratives_delete' figurative.id %}">Delete</a>
-            <form action="{% url 'delete_figurative_photo' figurative.id %}" method="POST">
-              {% csrf_token %}
-              <input class="del" type="submit" value="Delete Last Photo">
-            </form>
+          <form action="{% url 'delete_figurative_photo' figurative.id %}" method="POST">
+            {% csrf_token %}
+            <input class="del" type="submit" value="Delete Last Photo">
+          </form>
         </div>
         {% endif %}
       </div>
@@ -44,7 +44,7 @@
       </div>
       {% endif %}
     </div>
-
+  </div>
   </div>
 </div>
 

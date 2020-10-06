@@ -4,9 +4,9 @@
 
   <div class="description-card">
     <div class="fibers-images-div">
-        {% for photo in fiber.fiberphoto_set.all %}
-        <img class="fibers-img" src="{{photo.url}}">
-        {% endfor %}
+      {% for photo in fiber.fiberphoto_set.all %}
+      <img class="fibers-img" src="{{photo.url}}">
+      {% endfor %}
     </div>
     <div class="description">
       <ul class="description-ul">
@@ -34,16 +34,16 @@
         </div>
 
         {% if user.is_authenticated %}
-          <div class="add-pic">
-            <form action="{% url 'fiber_photo' fiber.id %}" enctype="multipart/form-data" method="POST">
-              {% csrf_token %}
-              <input type="file" name="photo-file">
-              <br><br>
-              <input type="submit" value="Upload Photo">
-            </form>
-          </div>
+        <div class="add-pic">
+          <form action="{% url 'fiber_photo' fiber.id %}" enctype="multipart/form-data" method="POST">
+            {% csrf_token %}
+            <input type="file" name="photo-file">
+            <br><br>
+            <input type="submit" value="Upload Photo">
+          </form>
         </div>
-        {% endif %}
+      </div>
+      {% endif %}
     </div>
   </div>
 
