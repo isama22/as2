@@ -515,8 +515,8 @@ input {
         height: 267px;
         margin: 20px;
         padding: 10px;
-        border: solid 1px;
-        border-color: bisque;
+        /* border: solid 1px;
+        border-color: bisque; */
     }
     .fibers-images-div {
         margin-left: 20px;
@@ -542,12 +542,24 @@ input {
     }
         /* figurative detail  */  
     .figurative-img {
-        /* height: 470px; */
         height: 267px;
         width: 260px;
-        /* margin: 20px;
-        padding: 10px;
-        border: solid 1px;
-        border-color: bisque; */
     }
+        /* digitals */
+    .digitals-grid {
+        display: block;
+        margin-left: 25px;
+    }    
+    .digital-detail-page {
+        margin-left: 0px;
+    }
+    .images-div {
+        margin-left: 0px;
+    }
+    .digital-img {
+        height: 267px;
+        margin: 20px;
+        padding: 10px;
+    }
+    
 }
