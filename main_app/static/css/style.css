@@ -414,6 +414,9 @@ input {
 
 .images-div {
     margin-left: 150px;
+    /* background-color: lavender  ; */
+    display: flex;
+    flex-direction: row;
 }
 
 .fibers-images-div {
@@ -525,6 +528,7 @@ input {
         width: 250px;
         display: flex;
         flex-direction: column;
+
     }
     .description {
         display: flex;

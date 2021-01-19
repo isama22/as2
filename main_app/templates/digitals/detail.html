@@ -1,22 +1,22 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="digital-detail-page">
-
   <div class="description-card">
     <div class="images-div">
       <!-- <div class="images"> -->
-        {% for photo in digital.digitalphoto_set.all %}
-        <img class="digital-img" src="{{photo.url}}">
-        <!-- {% empty %}
+      {% for photo in digital.digitalphoto_set.all %}
+      <img class="digital-img" src="{{photo.url}}">
+      <!-- {% empty %}
         <div class="empty">
           <div class="no-photos">
             <p>No photos to show yet</p>
           </div> -->
-          {% endfor %}
-        </div>
+      {% endfor %}
 
-      <!-- </div> -->
-  
+    </div>
+
+    <!-- </div> -->
+
     <div class="description">
       <ul class="description-ul">
         <li class="mobile-description-li">{{ digital.title }}</li>
@@ -28,18 +28,19 @@
 
       <div class="column-for-delete">
 
-        <div class="loggedin-edit">
-          {% if user.is_authenticated %}
-          <div class="edit-options">
-            <a class="edit-link" href="{% url 'digitals_update' digital.id %}">Edit</a>
-            <a class="edit-link" href="{% url 'digitals_delete' digital.id %}">Delete</a>
-            <form action="{% url 'delete_digital_photo' digital.id %}" method="POST">
-              {% csrf_token %}
-              <input class="del" type="submit" value="Delete Last Photo">
-            </form>
-          </div>
-          {% endif %}
+      </div>
+      <div class="loggedin-edit">
+        {% if user.is_authenticated %}
+        <div class="edit-options">
+          <a class="edit-link" href="{% url 'digitals_update' digital.id %}">Edit</a>
+          <a class="edit-link" href="{% url 'digitals_delete' digital.id %}">Delete</a>
+          <form action="{% url 'delete_digital_photo' digital.id %}" method="POST">
+            {% csrf_token %}
+            <input class="del" type="submit" value="Delete Last Photo">
+          </form>
         </div>
+        {% endif %}
+
 
         {% if user.is_authenticated %}
         <div class="add-pic">
@@ -50,13 +51,13 @@
             <input type="submit" value="Upload Photo">
           </form>
         </div>
-        {% endif %}
       </div>
-    </div>
+      {% endif %}
     </div>
   </div>
+</div>
 
-  {% for photo in digital.digitalphoto_set.all %}
+{% for photo in digital.digitalphoto_set.all %}
 {% empty %}
 <div class="empty">
   <div class="no-photos">
@@ -65,4 +66,4 @@
 </div>
 {% endfor %}
 
-  {% endblock %}
+{% endblock %}
