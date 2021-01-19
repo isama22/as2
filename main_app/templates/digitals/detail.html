@@ -3,20 +3,10 @@
 <div class="digital-detail-page">
   <div class="description-card">
     <div class="images-div">
-      <!-- <div class="images"> -->
       {% for photo in digital.digitalphoto_set.all %}
       <img class="digital-img" src="{{photo.url}}">
-      <!-- {% empty %}
-        <div class="empty">
-          <div class="no-photos">
-            <p>No photos to show yet</p>
-          </div> -->
       {% endfor %}
-
     </div>
-
-    <!-- </div> -->
-
     <div class="description">
       <ul class="description-ul">
         <li class="mobile-description-li">{{ digital.title }}</li>
@@ -25,9 +15,7 @@
         <br><br>
         <li class="mobile-description-li"> <a class="edit-link" href="{% url 'digitals_index' %}">Back</a></li>
       </ul>
-
       <div class="column-for-delete">
-
       </div>
       <div class="loggedin-edit">
         {% if user.is_authenticated %}
@@ -40,8 +28,6 @@
           </form>
         </div>
         {% endif %}
-
-
         {% if user.is_authenticated %}
         <div class="add-pic">
           <form action="{% url 'digital_photo' digital.id %}" enctype="multipart/form-data" method="POST">
@@ -56,7 +42,6 @@
     </div>
   </div>
 </div>
-
 {% for photo in digital.digitalphoto_set.all %}
 {% empty %}
 <div class="empty">
