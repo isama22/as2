@@ -8,7 +8,6 @@
       <img class="figurative-img" src="{{photo.url}}">
       {% endfor %}
     </div>
-    
   <div class="description">
     <ul class="description-ul">
       <li class="mobile-description-li">{{ figurative.title }}</li>
@@ -17,9 +16,12 @@
       <br><br>
       <li class="mobile-description-li"> <a class="edit-link" href="{% url 'figuratives_index' %}">Back</a></li>
     </ul>
-
-    <!-- <div class="column-for-delete"> -->
-
+    <div class="mobile-description">
+      <div class="mobile-title">{{ figurative.title }}</div>
+      <hr>
+      <div>{{ figurative.description }}</div>
+      <div><a class="mobile-edit-link" href="{% url 'fibers_index' %}">Back</a></div>
+    </div>
       {% if user.is_authenticated %}
       <div class="loggedin-edit">
         <div class="edit-options">
@@ -43,7 +45,6 @@
         </div>
       </div>
       {% endif %}
-    <!-- </div> -->
   </div>
   </div>
 </div>
