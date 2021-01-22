@@ -564,7 +564,7 @@ input {
         justify-content: center;
     }
     .images-div {
-        margin-left: 0px;
+        margin-left: 100px;
         display: flex;
         flex-direction: column;
         align-items: center;

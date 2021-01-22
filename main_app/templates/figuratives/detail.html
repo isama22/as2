@@ -18,10 +18,10 @@
       <li class="mobile-description-li"> <a class="edit-link" href="{% url 'figuratives_index' %}">Back</a></li>
     </ul>
 
-    <div class="column-for-delete">
+    <!-- <div class="column-for-delete"> -->
 
+      {% if user.is_authenticated %}
       <div class="loggedin-edit">
-        {% if user.is_authenticated %}
         <div class="edit-options">
           <a class="edit-link" href="{% url 'figuratives_update' figurative.id %}">Edit</a>
           <a class="edit-link" href="{% url 'figuratives_delete' figurative.id %}">Delete</a>
@@ -43,7 +43,7 @@
         </div>
       </div>
       {% endif %}
-    </div>
+    <!-- </div> -->
   </div>
   </div>
 </div>

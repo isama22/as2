@@ -15,10 +15,8 @@
         <br><br>
         <li class="mobile-description-li"> <a class="edit-link" href="{% url 'digitals_index' %}">Back</a></li>
       </ul>
-      <div class="column-for-delete">
-      </div>
+      {% if user.is_authenticated %}
       <div class="loggedin-edit">
-        {% if user.is_authenticated %}
         <div class="edit-options">
           <a class="edit-link" href="{% url 'digitals_update' digital.id %}">Edit</a>
           <a class="edit-link" href="{% url 'digitals_delete' digital.id %}">Delete</a>
