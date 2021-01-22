@@ -481,7 +481,7 @@ input {
         margin-top: 20px;
         margin-left: 15px;
         margin-bottom: 15px;
-        height: 1150px;
+        height: 1350px;
         width: 323px;
     }
     #about {
@@ -492,6 +492,7 @@ input {
         width: 270px;
         margin: 0px;
         margin-left: 15px;
+        height: 1000px;
     }
 
     .grid {
@@ -540,13 +541,6 @@ input {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-    }
-    .edit-options {
-        /* margin-bottom: 20px; */
-        /* width: 100px; */
-        /* display: flex;
-        flex-direction: column; */
-        /* background-color: lavender; */
     }
   
     /* figurative detail  */
