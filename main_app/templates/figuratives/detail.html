@@ -31,16 +31,16 @@
           </form>
         </div>
         {% endif %}
-      </div>
-
-      {% if user.is_authenticated %}
-      <div class="add-pic">
-        <form action="{% url 'figurative_photo' figurative.id %}" enctype="multipart/form-data" method="POST">
-          {% csrf_token %}
-          <input type="file" name="photo-file">
-          <br><br>
-          <input type="submit" value="Upload Photo">
-        </form>
+        
+        {% if user.is_authenticated %}
+        <div class="add-pic">
+          <form action="{% url 'figurative_photo' figurative.id %}" enctype="multipart/form-data" method="POST">
+            {% csrf_token %}
+            <input type="file" name="photo-file">
+            <br><br>
+            <input type="submit" value="Upload Photo">
+          </form>
+        </div>
       </div>
       {% endif %}
     </div>
