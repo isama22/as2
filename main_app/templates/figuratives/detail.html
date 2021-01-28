@@ -18,9 +18,8 @@
     </ul>
     <div class="mobile-description">
       <div class="mobile-title">{{ figurative.title }}</div>
-      <hr>
-      <div>{{ figurative.description }}</div>
-      <div><a class="mobile-edit-link" href="{% url 'fibers_index' %}">Back</a></div>
+      <div class="mobile-description-text">{{ figurative.description }}<a class="mobile-edit-link" href="{% url 'fibers_index' %}">Back</a></div>
+
     </div>
       {% if user.is_authenticated %}
       <div class="loggedin-edit">

@@ -17,9 +17,7 @@
       </ul>
       <div class="mobile-description">
         <div class="mobile-title">{{ digital.title }}</div>
-        <hr>
-        <div>{{ digital.description }}</div>
-        <div><a class="mobile-edit-link" href="{% url 'fibers_index' %}">Back</a></div>
+        <div class="mobile-description-text">{{ digital.description }}<a class="mobile-edit-link" href="{% url 'fibers_index' %}">Back</a></div>
       </div>
 
       {% if user.is_authenticated %}
