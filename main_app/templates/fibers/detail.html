@@ -18,9 +18,7 @@
 
       <div class="mobile-description">
         <div class="mobile-title">{{ fiber.title }}</div>
-        <!-- <hr> -->
         <div class="mobile-description-text">{{ fiber.description }} <a class="mobile-edit-link" href="{% url 'fibers_index' %}">Back</a></div>
-        <!-- <div><a class="mobile-edit-link" href="{% url 'fibers_index' %}">Back</a></div> -->
       </div>
 
       {% if user.is_authenticated %}
