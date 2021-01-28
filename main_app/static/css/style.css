@@ -523,11 +523,6 @@ input {
         margin-left: 0px;
     }
     .description-ul {
-        /* width: 220px;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        margin-left: 50px; */
         display: none;
     }
     .mobile-description-li {
@@ -536,10 +531,19 @@ input {
     .mobile-description {
         display: block;
         justify-content: center;
-        margin-left: 50px;
+        margin-left: 40px;
+        border-left: solid 2px bisque;
+        margin-bottom: 20px;
+        
     }
     .mobile-title {
         font-weight: bold;
+        /* border-left: solid 4px white; */
+        border-bottom: solid 2px bisque;
+        padding: 10px;
+    }
+    .mobile-description-text {
+        padding: 10px 10px 0px 10px;
     }
     .mobile-edit-link {
         display: flex;
