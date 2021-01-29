@@ -115,6 +115,7 @@ nav {
 
 .description-ul {
     width: 220px;
+    font-size: 1.25vw;
 }
 
 li {
@@ -177,6 +178,7 @@ a:hover {
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 28px;
     grid-row-gap: 35px;
+    width: 100%;
 }
 
 .digitals-grid {
@@ -189,7 +191,7 @@ a:hover {
     grid-row-gap: 35px;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1000px) {
     .grid, .digitals-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -222,6 +224,7 @@ a:hover {
     padding: 10px;
     width: 240px;
     margin: 20px;
+    margin: 10%;
 }
 
 .center-grid {
@@ -339,12 +342,14 @@ a:hover {
 
 .description {
     display: flex;
-    /* justify-content: flex-start; */
-    /* margin-top: 250px; */
     align-items: center;
     margin-left: 5%;
-    /* background-color: tomato; */
     width: 400px;
+}
+.loggedin-edit {
+    border-left: solid 1px bisque;
+    padding-left: 20px;
+    margin-left: 20px;
 }
 
 .mobile-description {
@@ -363,6 +368,7 @@ a:hover {
 
 .fibers-img {
     height: 667px;
+    height: 40vw;
     margin: 20px 20px 20px 50px;
     padding: 10px;
     border: solid 1px;
