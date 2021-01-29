@@ -4,9 +4,7 @@
 {% if user.is_authenticated %}
 <h5><a class="loggedin-option" href="{% url 'fibers_create' %}"><em>+ Add a Fiber Piece</em> &nbsp;</a></h5>
 {% endif %}
-
 <div class="center-grid">
-
   <div class="grid">
     {% for fiber in fibers %}
     <div>
@@ -23,7 +21,6 @@
     </div>
     {% endfor %}
   </div>
-
 </div>
 
 {% endblock %}
