@@ -8,10 +8,10 @@
 <div class="center-grid">
   <div class="grid">
     {% for figurative in figuratives %}
-    
+    <div>
     <a href="/figuratives/{{ figurative.id }}">
       <div class="fibers-index-link">
-        <span>{{ figurative.title }}</span>
+        <span class="index-title">{{ figurative.title }}</span>
         {% for photo in figurative.figurativephoto_set.all %}
         {% if forloop.first %}
           <img class="fibers-img-index" src="{{photo.url}}">
@@ -19,7 +19,7 @@
           {% endfor %}
         </div>
       </a>
-    
+    </div>
     {% endfor %}
   </div>
 </div>
