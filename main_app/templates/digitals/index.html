@@ -5,11 +5,11 @@
 <h5><a class="loggedin-option" href="{% url 'digitals_create' %}"><em>+ Add a Digital Piece</em> &nbsp;</a></h5>
 {% endif %}
 <div class="center-grid">
-  <div class="digitals-grid">
+  <div class="grid">
     {% for digital in digitals %}
     <div>
       <a href="/digitals/{{ digital.id }}">
-        <div class="index-link">
+        <div class="fibers-index-link">
           <span class="index-title">{{ digital.title }}</span>
           {% for photo in digital.digitalphoto_set.all %}
           {% if forloop.first %}

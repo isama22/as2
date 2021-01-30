@@ -16,8 +16,6 @@ body {
     justify-content: flex-start;
     text-align: center;
     font-size: 1vw;
-
-
     color: #FFFFFF;
     /* background: #242323; */
     text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #E3BDBB 0px 0px 20px, #E3BDBB 0px 0px 30px, #E3BDBB 0px 0px 40px, #E3BDBB 0px 0px 50px, #E3BDBB 0px 0px 75px;
@@ -176,51 +174,13 @@ a:hover {
 }
 
 .grid {
-    /* display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    margin: 2%; */
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 28px;
-    grid-row-gap: 35px;
-    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
 }
 
 .digitals-grid {
-    /* display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    margin: 60px 250px; */
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 28px;
-    grid-row-gap: 35px;
-}
-
-@media screen and (max-width: 1000px) {
-    .grid, .digitals-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-column-gap: 28px;
-        grid-row-gap: 35px;
-    }
-}
-
-@media screen and (max-width: 900px) {
-    .grid, .digitals-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-column-gap: 28px;
-        grid-row-gap: 35px;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .grid, .digitals-grid {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        grid-column-gap: 28px;
-        grid-row-gap: 35px;
-    }
+    display: flex;
+    flex-flow: row wrap;
 }
 
 .index-link {
@@ -235,7 +195,7 @@ a:hover {
 .center-grid {
     display: flex;
     justify-content: center;
-    margin: 0px;
+    padding-left: 3%;
 }
 
 .fibers-index-link {
@@ -331,7 +291,6 @@ a:hover {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-
 }
 
 .edit-link {
@@ -351,6 +310,7 @@ a:hover {
     margin-left: 5%;
     width: 400px;
 }
+
 .loggedin-edit {
     border-left: solid 1px bisque;
     padding-left: 20px;
@@ -436,7 +396,6 @@ a:hover {
     margin: 100px;
 }
 
-
 input {
     margin: 6px;
     padding: 10px;
@@ -448,14 +407,6 @@ input {
     border-radius: 5px;
     width: 180px;
 }
-
-/* .empty {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 100px;
-    margin-bottom: 200px;
-} */
 
 .no-photos {
     border: solid 1px wheat;
@@ -474,10 +425,6 @@ input {
     display: flex;
     flex-direction: row;
 }
-
-/* .fibers-images-div {
-    margin-left:    50px;
-} */
 
 .column-for-delete {
     display: flex;
