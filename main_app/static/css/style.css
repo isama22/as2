@@ -119,6 +119,7 @@ nav {
 .description-ul {
     width: 220px;
     font-size: 1.25vw;
+    margin-top: 100%;
 }
 
 li {
@@ -182,6 +183,8 @@ a:hover {
     display: flex;
     flex-flow: row wrap;
 }
+
+
 
 .index-link {
     color: bisque;
@@ -306,7 +309,7 @@ a:hover {
 
 .description {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     margin-left: 5%;
     width: 400px;
 }
@@ -421,9 +424,9 @@ input {
 }
 
 .images-div {
-    margin-left: 150px;
+    margin-left: 20px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .column-for-delete {
