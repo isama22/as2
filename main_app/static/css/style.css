@@ -16,6 +16,11 @@ body {
     justify-content: flex-start;
     text-align: center;
     font-size: 1vw;
+
+
+    color: #FFFFFF;
+    /* background: #242323; */
+    text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #E3BDBB 0px 0px 20px, #E3BDBB 0px 0px 30px, #E3BDBB 0px 0px 40px, #E3BDBB 0px 0px 50px, #E3BDBB 0px 0px 75px;
 }
 
 .pre1 {
