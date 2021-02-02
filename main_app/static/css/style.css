@@ -141,9 +141,13 @@ a:hover {
 #contact {
     color: wheat;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 450px;
+}
+.site-link {
+    color: white;
 }
 
 .content-page {
