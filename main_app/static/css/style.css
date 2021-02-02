@@ -17,11 +17,10 @@ body {
     text-align: center;
     font-size: 1vw;
     color: #FFFFFF;
-    /* background: #242323; */
     text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #E3BDBB 0px 0px 20px, #E3BDBB 0px 0px 30px, #E3BDBB 0px 0px 40px, #E3BDBB 0px 0px 50px, #E3BDBB 0px 0px 75px;
 }
 
-.pre1 {
+#pre1>a {
     color: #E3BDBB;
 }
 
@@ -183,8 +182,6 @@ a:hover {
     display: flex;
     flex-flow: row wrap;
 }
-
-
 
 .index-link {
     color: bisque;
@@ -463,10 +460,12 @@ input {
     }
     /* base */
     #pre1 {
-        width: 323px;
+        width: 310px;
         padding-bottom: 20px;
+        margin-right: 20px;
+        
     }
-    .pre1 {
+    #pre1>a {
         font-size: 11px;
     }
     nav {
@@ -539,12 +538,10 @@ input {
         display: block;
         justify-content: center;
         margin-left: 40px;
-        /* border-left: solid 2px bisque; */
         margin-bottom: 20px;
     }
     .mobile-title {
         font-weight: bold;
-        /* border-left: solid 4px white; */
         border-bottom: solid 2px bisque;
         padding: 10px;
     }
