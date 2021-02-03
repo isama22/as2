@@ -28,11 +28,11 @@
         <div class="edit-options">
           <a class="edit-link" href="{% url 'fibers_update' fiber.id %}">Edit</a>
           <a class="edit-link" href="{% url 'fibers_delete' fiber.id %}">Delete</a>
+          <form action="{% url 'delete_fiber_photo' fiber.id %}" method="POST">
+            {% csrf_token %}
+            <input class="del" type="submit" value="Delete Last Photo">
+          </form>
         </div>
-            <form action="{% url 'delete_fiber_photo' fiber.id %}" method="POST">
-              {% csrf_token %}
-              <input class="del" type="submit" value="Delete Last Photo">
-            </form>
         {% endif %}
         {% if user.is_authenticated %}
      
