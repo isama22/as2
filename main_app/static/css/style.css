@@ -118,7 +118,8 @@ nav {
 .description-ul {
     width: 220px;
     font-size: 1.25vw;
-    margin-top: 100%;
+    /* margin-top: 100%; */
+    /* background-color: blue; */
 }
 
 li {
@@ -310,15 +311,20 @@ a:hover {
 
 .description {
     display: flex;
-    align-items: flex-start;
+    /* align-items: flex-start; */
+    flex-direction: row;
+    align-items: center;
     margin-left: 5%;
-    width: 400px;
+    width: 420px;
+    /* background-color: white; */
 }
 
 .loggedin-edit {
     border-left: solid 1px bisque;
     padding-left: 20px;
     margin-left: 20px;
+    /* background-color: red; */
+    /* margin-top: 100px; */
 }
 
 .mobile-description {
