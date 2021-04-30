@@ -17,7 +17,7 @@ body {
     text-align: center;
     font-size: 1vw;
     color: #FFFFFF;
-    text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #E3BDBB 0px 0px 20px, #E3BDBB 0px 0px 30px, #E3BDBB 0px 0px 40px, #E3BDBB 0px 0px 50px, #E3BDBB 0px 0px 75px;
+    /* text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #E3BDBB 0px 0px 20px, #E3BDBB 0px 0px 30px, #E3BDBB 0px 0px 40px, #E3BDBB 0px 0px 50px, #E3BDBB 0px 0px 75px; */
 }
 
 #pre1>a {
