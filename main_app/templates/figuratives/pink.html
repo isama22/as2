@@ -1,12 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <p>pink</p>
-</body>
-</html>
+{% extends 'base.html' %}
+{% block content %}
+<div class="figurative-detail-page">
+
+    <div class="description-card">
+        <div class="fibers-images-div">
+
+            <img class="figurative-img" src="https://i.postimg.cc/yYx1Pkj2/Screen-Shot-2021-05-11-at-1-36-37-PM.png">
+
+        </div>
+        <div class="description">
+            <ul class="description-ul">
+                <li class="mobile-description-li">title</li>
+                <br><br>
+                <hr><br>
+                <li class="mobile-description-li">desc</li>
+                <br><br>
+                <li class="mobile-description-li"> <a class="edit-link" href="{% url 'figuratives_index' %}">Back</a>
+                </li>
+            </ul>
+            <div class="mobile-description">
+                <div class="mobile-title">title</div>
+                <div class="mobile-description-text">desc<a class="mobile-edit-link"
+                        href="{% url 'fibers_index' %}">Back</a></div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}
