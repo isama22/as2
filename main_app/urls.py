@@ -34,4 +34,5 @@ urlpatterns = [
   path('fibers/<int:fiber_id>/fiber_photo/', views.fiber_photo, name='fiber_photo'),
   path('fibers/<int:fiber_id>/delete_fiber_photo/', views.delete_fiber_photo, name='delete_fiber_photo'),
 
+  path('figuratives/pink/', views.pink_detail, name='pink-detail'),
 ]

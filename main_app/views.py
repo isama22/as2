@@ -120,6 +120,8 @@ def delete_figurative_photo(request, figurative_id):
     
     return redirect('figuratives_detail', figurative_id=figurative_id)
 
+def pink_detail(request):
+  return render(request, 'figuratives/pink.html')
 
 def fibers_index(request):
   fibers = Fiber.objects.all()
