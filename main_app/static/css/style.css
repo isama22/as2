@@ -356,14 +356,18 @@ a:hover {
 }
 
 .fibers-img {
-    height: 667px;
     height: 40vw;
     margin: 20px 20px 20px 50px;
     padding: 10px;
     border: solid 1px;
     border-color: bisque;
 }
-
+.pink-img {
+    margin: 20px 20px 20px 50px;
+    padding: 10px;
+    border: solid 1px;
+    border-color: bisque;
+}
 .figurative-detail-page {
     display: flex;
 }
