@@ -2,12 +2,15 @@
 {% block content %}
 <div class="home">
     <div id="home-main-content">
-        <div class="enter-border">
-            <div class="inner-enter-border">
-                <p><a class="enter" href="{% url 'about' %}"><em>Enter</em></a></p>
+        <div class="first-enter-border">
+            <div class="outer-enter-border">
+                <div class="enter-border">
+                    <div class="inner-enter-border">
+                        <p><a class="enter" href="{% url 'about' %}"><em>Enter</em></a></p>
+                    </div>
+                </div>
             </div>
         </div>
-      
     </div>
 </div>
 <p><a class="login" href="{% url 'login' %}">•</a></p>
